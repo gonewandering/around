@@ -1,0 +1,188 @@
+$icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
+// bower:scss
+@import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
+// endbower
+
+body { 
+  background: #552954;
+  color: white;
+  font-weight: 300;
+  font-family: "Futura PT", "Helvetica Neue";
+  overflow: hidden;
+}
+
+.view-animate.ng-enter{
+  transition:0.15s linear all;
+  opacity: 0;
+}
+.view-animate.ng-leave{
+  transition:0.15s linear all;
+  opacity: 0;
+}
+.view-animate.ng-leave-active{
+  transition:0.15s linear all;
+  opacity: 0;
+}
+.view-animate.ng-enter-active{
+  transition:0.15s linear all;
+  opacity: 0;
+}
+
+.view-animate { 
+  opacity: 1;
+}
+
+.center { 
+  text-align: center;
+}
+
+.container-relative { 
+  position: relative;
+  z-index: 1000;
+}
+
+.btn-letter { 
+    font-size: 100px;
+    color: transparent;
+    text-shadow: 0 0 3px white;
+    border: none;
+    background: transparent;
+}
+
+.btn { 
+  border-radius: 0px;
+  font-size: 1.8em;
+  tex-transform: uppercase;
+  &.btn-default {
+    background: transparent;
+    color: white;
+    border: solid 1px transparent;
+    border-left-width: 6px;
+    font-weight: 300;
+  }
+}
+
+input.input-lg, textarea.input-lg { 
+    background: transparent;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    font-weight: 300;
+}
+
+label { 
+  text-align: center;
+}
+
+input.input-lg { 
+  border-bottom: solid 6px rgba(white, .4);
+  font-size: 2em;
+  text-align: center;
+
+  &:focus { 
+    border-color: white;
+    outline: none;
+    box-shadow: none;
+  }
+}
+
+textarea.input-lg { 
+  border-bottom: solid 6px rgba(white, .4);
+  font-size: 1.1em;
+  line-height: 1.5em;
+  width: 100%;
+
+  &:focus { 
+    border-color: white;
+    outline: none;
+    box-shadow: none;
+  }
+}
+
+.thumb { 
+  width: 100px;
+  height: 100px;
+  background-color: transparent;
+  border-radius: 50px;
+  border: solid 6px rgba(white, .4);
+  display: inline-block;
+}
+
+.spheres {
+    position: absolute;
+    text-align: center;
+    margin: auto;
+    top: 0;
+    left: 0;
+
+    animation: sk-chasingDotsRotate 30.0s infinite linear;
+
+  .sphere {
+    width: 80%;
+    height: 80%;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    background-color: transparent;
+    border-radius: 100%;
+    border: solid 5px rgba(white, .1);
+
+    animation: sk-chasingDotsBounce 6.0s infinite ease-in-out;
+  }
+
+  .sphere:first-child {
+    top: auto;
+    bottom: 0px;
+    animation-delay: 2.0s;
+  }
+
+  .sphere:last-child {
+    top: auto;
+    bottom: 50%;
+    animation-delay: -2.0s;
+  }
+}
+
+@keyframes sk-chasingDotsRotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes sk-chasingDotsBounce {
+  0%, 100% {
+    transform: scale(0.0);
+  } 50% {
+    transform: scale(2.0);
+  }
+}
+
+
+.view-animate.ng-enter { 
+  transition: opacity 1s linear;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  opacity: 0;
+}
+
+.view-animate.ng-enter-active {
+  opacity: 1
+}
+
+
+.view-animate.ng-leave { 
+  @include transition-property(opacity);
+  @include transition-duration(0.5s);
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  opacity: 1;
+}
+
+.view-animate.ng-leave-active { 
+  opacity: 0
+}
+

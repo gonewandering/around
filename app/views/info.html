@@ -1,0 +1,19 @@
+<div class="container container-relative" center>
+	<div class="row">
+		<div class="col-sm-4 col-sm-offset-4">
+			<div class="input-group center" style="margin-bottom: 35px">
+				<label>What's your number, {{ profile.data.first_name }}?</label>
+				<input ng-model="profile.data.phone" class="form-control input-lg" placeholder="###-###-####" ng-keyup="phone()" />
+			</div>
+			<div class="input-group center" style="margin-bottom: 35px">
+				<label>How about your email</label>
+				<input ng-model="profile.data.email" class="form-control input-lg" placeholder="zap@zapzap.com" ng-keyup="email()" />
+			</div>
+			<div class="center">
+				<a href="" class="btn-lg btn-default btn" ng-click="profile.next('bio')">
+					Next
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
